@@ -1,0 +1,855 @@
+@keyframes toGrey {
+    from {
+        color: #8DACBB;
+    }
+    to {
+        color: #5B5555;
+    }
+}
+
+@keyframes toBlue {
+    from {
+        color: #5B5555;
+    }
+    to {
+        color: #8DACBB;
+    }
+}
+
+@keyframes rectEnter {
+    from {
+        height: 0%;
+        /* transform: translatex(-70%); */
+        opacity: 0;
+    }
+    to {
+        height: 350px;
+        opacity: 1;
+    }
+}
+
+@keyframes rectExit {
+    from {
+        height: 350px;
+        opacity: 1;
+    }
+    to {
+        height: 0%;
+        opacity: 0;
+    }
+}
+
+@keyframes goDown {
+    from {
+        transform: translatey(-70%);
+        opacity: 0;
+    }
+    to {
+        transform: translatey(0%);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes goUp {
+    from {
+        transform: translatey(0%);
+        opacity: 1;
+    }
+    to {
+        transform: translatey(-70%);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+        visibility: visible;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+        visibility: hidden;
+    }
+}
+
+@keyframes expand {
+    from {
+        transform: translateY(-5%);
+        opacity: 0%;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 100%;
+        visibility: visible;
+    }
+}
+
+
+#bg_rectangle {
+    display: flex;
+    margin-top: 3%;
+    width: 100%;
+    height: 350px;
+    flex-shrink: 0;
+    background: #FFF;
+    box-shadow: 27px 36px 29px 6px rgba(0, 0, 0, 0.21);
+    flex-direction: column;
+    align-items: center;
+    animation: rectEnter 1.3s ease-out forwards;
+    /* border-radius: 0% 5% 5% 0%; */
+}
+
+#bg_rectangle h1 {
+    color: #4C4646;
+    margin-top: 6%;
+    margin-bottom: 1%;
+    text-align: center;
+    font-family: "Changa One";
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 70px; /* 72.917% */
+    visibility: hidden;
+    animation: goDown 1s ease-out .5s forwards;
+}
+
+#bg_rectangle p {
+    color: #5B5555;
+    text-align: center;
+    font-family: Cantarell;
+    font-size: 26px;
+    font-style: normal;
+    margin: 0% 23%;
+    font-weight: 400;
+    line-height: 118.75%; /* 118.75% */
+    letter-spacing: 0.32px;
+    visibility: hidden;
+    animation: goDown 1s ease-out .5s forwards;
+}
+
+#sparkle {
+    position: absolute;
+    left: 28%;
+    top: 20%;
+    width: 8%;
+    height: auto;
+    visibility: hidden;
+    animation: fadeIn 1s ease-out .8s forwards;
+}
+
+#miffy-ball {
+    position: absolute;
+    left: 6%;
+    top: 25%;
+    width: 16%;
+    height: auto;
+    visibility: hidden;
+    animation: fadeIn 1s ease-out .6s forwards;
+    
+}
+
+#miffy-book {
+    position: absolute;
+    right: 6%;
+    top: 28%;
+    width: 14%;
+    height: auto;
+    visibility: hidden;
+    animation: fadeIn 1s ease-out .6s forwards;
+}
+
+.exp-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    margin-top: 8%;
+}
+
+#line {
+    margin-left: 16.8%;
+    width: 4px;
+    height: 115%;
+    background: #8DACBB;
+    visibility: hidden;
+    animation: fadeIn 1s ease-out 1s forwards;
+}
+
+.exp-showcase-container {
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    padding-bottom: 15%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    animation: expand 1s ease-out 1s forwards;
+}
+
+.exp-showcase {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.8%;
+    padding-top: 2%;
+    padding-left: 0%;
+    margin-bottom: 4%;
+    width: 80%;
+    height: 50%;
+    flex-shrink: 0;
+    border-radius: 35px;
+    border: 4px solid #8DACBB;
+    background: rgba(255, 255, 255, 0.84);
+    box-shadow: 1px 4px 20.2px 8px rgba(0, 0, 0, 0.13);
+}
+
+#KH-logo {
+    width: 9%;
+    margin: 0;
+}
+
+.col-text {
+    padding-left: 1.5%;
+}
+
+.col-text h2 {
+    color: #4C4646;
+    text-align: left;
+    font-family: "Changa One";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0%;
+    letter-spacing: 3.54px;
+}
+
+.col-text h3 {
+    color: #5B5555;
+    text-align: center;
+    font-family: Cantarell;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0%; /* 135.714% */
+    letter-spacing: -0.84px;
+}
+
+.heading {
+    display: flex;
+    height: 20%;
+    flex-direction: row;
+    padding-left: 4%;
+}
+
+.description {
+    padding-top: 1%;
+    color: #5B5555;
+    font-family: Cantarell;
+    font-size: 17px;
+    margin-left: 5%;
+    margin-right: 10%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; /* 150% */
+    letter-spacing: -1.4px;
+}
+
+.bullets {
+    margin: 0;
+    color: #4C4646;
+    font-family: Cantarell;
+    font-size: 17.4px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px; /* 145% */
+    letter-spacing: -1.0px;
+    margin-left: 1%;
+    margin-right: 10%;
+}
+
+.bullets li::marker {
+    font-size: 12px;
+}
+
+#con2 {
+    margin-bottom: 1%;
+    padding-top: 1%;
+}
+
+#con2 .description {
+    padding-top: 2%;
+}
+
+#ASA-logo {
+    width: 122.2px;
+    height: 112.4px;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+#miffy-job {
+    width: 16.5%;
+    z-index: 4;
+    position: absolute;
+    top: 68%;
+    right: 6%;
+    visibility: hidden;
+    animation: expand 1s ease-out 1s forwards;
+    transform: scaleX(-1) !important;
+}
+
+#miffy-stand {
+    width: 16.5%;
+    z-index: 4;
+    position: absolute;
+    left: 11%;
+    top: 180%;
+    visibility: hidden;
+    animation: expand 1s ease-out 1s forwards;
+
+}
+
+#bullet1 {
+    width: 12%;
+    z-index: 2;
+    position: absolute;
+    top: 100%;
+    left: 11.2%;
+    visibility: hidden;
+    animation: fadeIn 1s ease-out 1s forwards;
+}
+
+#bullet2 {
+    width: 12%;
+    z-index: 2;
+    position: absolute;
+    top: 160%;
+    left: 11.2%;
+}
+
+/* Customize the scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8DACBB; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6B8E9E; /* Color of the scrollbar thumb on hover */
+}
+
+/* HOTBAR START */
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    position: relative;
+    width: 100vw;
+    height: 100vh; /* Fixed from width typo */
+    padding: 0;
+    background: #E2E2E2;
+}
+
+.hotbar-buttons {
+    color: #5B5555;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: "Calistoga";
+    font-size: 28px;
+    margin: 0px 15px;
+    padding-left: 10px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.hotbar-buttons:hover {
+    color: #AACADE;
+}
+
+.current-page {
+    color: #8DACBB;
+}
+
+.imageButton {
+    position: relative;
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.icons-topright {
+    padding-right: 0px;
+    width: 80%;
+}
+
+
+.icon-container {
+    position: absolute;
+    right: 3%;
+    top: 1.5%;
+}
+
+.hotbar {
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2%;
+    padding-top: 2.5%;
+    padding-bottom: 2%;
+}
+
+.mailInfo {
+    position: absolute;
+    font-family: Cantarell;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: #FFFFFF;
+    top: 60px;
+    border-radius: 15px;
+    padding: 12px;
+    right: -130px;
+    filter: drop-shadow(10px 9px 12.5px rgba(0, 0, 0, 0.25));
+    
+}
+.triangle {
+    position: absolute;
+    width: 20px;
+    top: 38px;
+    right: 16px;
+    z-index: 5;
+}
+
+.combine {
+    visibility: hidden;
+    z-index: 100;
+}
+
+#Mail:hover .combine {
+    visibility: visible;
+    opacity: 1;
+}
+
+.pages {
+    position: absolute;
+    left: 0px;
+}
+
+.topTwo {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* HOTBAR END */
+
+@media (max-width: 600px) {
+
+    @keyframes rectEnterMob {
+            from {
+                height: 0%;
+                opacity: 0;
+            }
+            to {
+                height: 40%;
+                opacity: 1;
+                visibility: visible;
+            }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0%;
+        }
+        to {
+            opacity: 100%;
+            visibility: visible;
+        }
+    }
+
+    @keyframes topToBottom {
+        from {
+            transform: translateY(-20%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0%);
+            opacity: 1;
+            visibility: visible;
+        }
+        
+    }
+
+    /* to copy and paste */
+    .body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .icon-container {
+        width: 70%;
+        top: 50%;
+        left: 30%;
+        z-index: 200;
+        visibility: hidden;
+        animation: fadeIn 1s ease-out 1.2s forwards;
+    }
+
+    .imageButton {
+        width: 12%;
+    }
+
+    #Mail {
+        width: 13%;
+    }
+    
+    .pages {
+        top: 0px;
+        left: 15px;
+    }
+
+    .hotbar-buttons {
+        align-self: center;
+        font-size: 20px;
+        margin: 0px;
+        margin-right: 20px;
+        padding: 0px;
+        padding-top: 40px;
+    }
+
+    #projectsButton {
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+    
+    /* end of copy and paste */
+
+    #bg_rectangle {
+        position: relative;
+        margin-top: 30%;
+        height: 30%;
+        display: flex;
+        width: 100%;
+        margin-bottom: 18%;
+        animation: none;
+        visibility: hidden;
+        animation: rectEnterMob 1s ease-out forwards;
+    }
+
+    
+    #bg_rectangle h1 {
+        font-size: 48px;
+        line-height: 40px;
+        margin-top: 15%;
+    }
+    
+    #bg_rectangle p {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px; /* 133.333% */
+        letter-spacing: 0.15px;
+        margin: 0;
+        margin: 0% 14% 0% 14%;
+        animation: topToBottom .8s ease-out .9s forwards;
+    }
+    
+    #sparkle {
+        width: 15%;
+        left: 8%;
+        top: 6%;
+    }
+    
+    #miffy-book {
+        visibility: hidden;
+        animation: none;
+    }
+    
+    #miffy-ball {
+        position: absolute;
+        width: 30%;
+        left: 70%;
+        top: 68%;
+        animation: fadeIn 1s ease-out 1s forwards;
+    }
+    
+    
+    .exp-showcase {
+        width: 88%;
+        margin-bottom: 15%;
+        min-height: 770px !important;
+        height: 80% !important;
+        flex-shrink: 0;
+        border: 1.5% solid #8DACBB;
+    }
+
+    #line {
+        margin: 0;
+        margin-left: 10%;
+        width: 1.5%;
+        margin-right: 2%;
+        height: 230vh;
+    }
+
+    .col-text h2 {
+        color: #4C4646;
+        width: 0%;
+        margin: 0;
+        width: 70%;
+        height: 50%;
+        margin-top: 30px;
+        font-family: "Changa One";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 0px; /* 291.667% */
+        letter-spacing: 1.92px;
+    }
+
+    .col-text h3 {
+        color: #5B5555;
+        font-family: Cantarell;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px; /* 112.5% */
+        letter-spacing: -0.48px;
+        margin: 0;
+        text-align: start;
+        padding-right: 0%;
+        padding-left: 0%;
+        margin-right: 0%;
+        
+    }
+
+    .heading {
+        flex-direction: row-reverse;
+    }
+
+    .col-text {
+        width: 100%;
+        padding-left: 5%;
+    }
+
+    .topTwo {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #KH-logo {
+        top: 1.5%;
+        position: absolute;
+        width: 16%;
+        right: 10%;
+        height: auto;
+    }
+
+    .exp-showcase {
+        position: relative;
+    }
+
+    .description p {
+        color: #5B5555;
+        margin-top: 60px;
+        font-family: Cantarell;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 125% */
+        letter-spacing: -1.12px;
+        margin-left: 4%;
+    }
+
+
+
+    .heading {
+        height: 5%;
+    }
+
+    #miffy-job {
+        visibility: hidden;
+        animation: none;
+    }
+
+    .bullets li {
+        color: #4C4646;
+        font-family: Cantarell;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 29px; /* 181.25% */
+    }
+
+    .col-text {
+        margin-left: 0%;
+    }
+    
+    #bullet1 {
+        width: 20%;
+        left: 1.05%;
+        z-index: 5;
+    }
+
+    #bullet2 {
+        top: 200%;
+        width: 20%;
+        left: 1.05%;
+        z-index: 5;
+    }
+
+    #ASA-logo {
+        position: absolute;
+        width: 20%;
+        right: 15%;
+        height: auto;
+        flex-shrink: 0;
+        margin: 0;
+    }
+
+    #con1 {
+        height: 75%;
+    }
+
+    #con2 .description{
+        padding-top: 5%;
+    }
+
+    #con2 {
+        padding-bottom: 15%;
+    }
+
+    #miffy-stand {
+        visibility: hidden;
+        animation: none;
+    }
+
+}
+
+@media (max-width: 431px)
+{
+    @keyframes rectEnterMob1 {
+        from {
+            height: 0%;
+            opacity: 0;
+        }
+        to {
+            height: 30%;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    #bg_rectangle {
+        animation: rectEnterMob1 1s ease-out forwards;
+    }
+
+    .icon-container {
+        top: 40%;
+    }
+}
+
+@media (max-width: 415px)
+{
+
+    @keyframes rectEnterMob2 {
+        from {
+            height: 0%;
+            opacity: 0;
+        }
+        to {
+            height: 30%;
+            opacity: 1;
+            visibility: visible;
+        }
+}
+
+    #bg_rectangle {
+        height: 30%;
+        animation: rectEnterMob2 1s ease-out forwards;
+    }
+
+    .icon-container {
+        top: 40%;
+    }
+}
+
+@media (max-width: 376px)
+{
+    @keyframes rectEnterMob3 {
+        from {
+            height: 0%;
+            opacity: 0;
+        }
+        to {
+            height: 40%;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    #bg_rectangle {
+        height: 40%;
+        animation: rectEnterMob3 1s ease-out forwards;
+    }
+
+    .icon-container {
+        top: 50%;
+    }
+}
+
+@media (max-width: 360px)
+{
+    .hotbar-buttons {
+        margin-right: 10px;
+    }
+}
+
+/* @media (min-width: 300px) and (max-width: 389px)
+{
+    #bg_rectangle {
+        height: 40%;
+    }
+
+    #line {
+        height: 270vh;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 370px)
+{
+    .hotbar-buttons {
+        margin-right: 10px;
+    }
+
+    #line {
+        height: 250vh;
+    }
+} */

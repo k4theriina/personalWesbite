@@ -1,0 +1,596 @@
+@keyframes toGrey {
+    from {
+        color: #8DACBB;
+    }
+    to {
+        color: #5B5555;
+    }
+}
+
+@keyframes toBlue {
+    from {
+        color: #5B5555;
+    }
+    to {
+        color: #8DACBB;
+    }
+}
+
+
+.bg_rectangle {
+    position: relative; /* Creates a stacking context */
+    border-radius: 0px 143px 143px 0px;
+    background: #FFF;
+    box-shadow: 27px 36px 29px 6px rgba(0, 0, 0, 0.21);
+    width: 1100px;
+    height: 550px;
+    z-index: 0; 
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: center; /* Center children vertically */
+    align-items: flex-start;
+    padding-left: 5%;
+    margin-top: 1.5%; 
+    animation: enter_bgrect 1.2s ease-out forwards;
+}
+
+.bg_rectangle::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Positioned relative to the container */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the entire container */
+    height: 100%;
+    background: inherit; /* Inherit background from parent */
+    border-radius: inherit; /* Match the parent's border-radius */
+    z-index: -1; /* Place it behind the rectangle */
+}
+
+.bg_rectangle h1,
+.bg_rectangle p,
+.bg_rectangle button {
+    position: relative;
+    visibility: hidden;
+    z-index: 1; /* Above the rectangle and pseudo-element */
+    margin: 10px; /* Adjust spacing if needed */
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: .8s;
+    
+}
+
+.bg_rectangle p {
+    padding-bottom: 25px;
+}
+
+.bg_rectangle h1 {
+    color: #4C4646;
+    font-family: "Changa One";
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 46px; /* 41.818% */
+}
+
+.bg_rectangle p {
+    color: #5B5555;
+    font-family: Cantarell;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 46px;
+    margin: 0;
+    letter-spacing: 3.2px;
+    padding-left: 10px;
+}
+
+.mainButton {
+    width: 200px;
+    color: #5B5555;
+    font-family: Cantarell;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 0px; /* 250% */
+    border-radius: 20px;
+    border: none;
+    background: #AACADE;
+    height: 70px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.mainButton:hover {
+    background: #DAE9F3;
+}
+
+#laptop {
+    position:absolute;
+    top: 200px;
+    right: 40px;
+    z-index: 3;
+    width: 540.698px;
+    height: 500.7px;
+    flex-shrink: 0;
+}
+
+#laptop-bg {
+    position: absolute;
+    width: 402.478px;
+    height: 300.802px;
+    z-index: 2;
+    top: 240px;
+    right:100px;
+    flex-shrink: 0;
+}
+
+#miffy-bear {
+    position: absolute;
+    z-index: 4;
+    top: 330px;
+    left: 0px;
+    padding: 0;
+    width: 210px;
+    height: 205px;
+    transform: rotate(-0.688deg);
+    flex-shrink: 0;
+    visibility: hidden;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: .5s;
+}
+
+#miffy-book {
+    position: absolute;
+    z-index: 4;
+    top: 370px;
+    right: -310px;
+    width: 250px;
+    height: 260px;
+    visibility: hidden;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: .5s;
+}
+
+#sparkle {
+    position: absolute;
+    width: 160px;
+    z-index: 4;
+    top: 50px;
+    left: 900px;
+    visibility: hidden;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: .9s;
+}
+
+
+.laptop {
+    position: absolute;
+    top: -100px;
+    right: -300px;
+    visibility: hidden;
+    
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: .5s;
+}
+
+/* HOTBAR START */
+
+body {
+    margin: 0;
+    position: relative;
+    width: 100vw;
+    height: 100vh; /* Fixed from width typo */
+    padding: 0;
+    background: #E2E2E2;
+}
+
+.hotbar-buttons {
+    color: #5B5555;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: "Calistoga";
+    font-size: 28px;
+    margin: 0px 15px;
+    padding-left: 10px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.hotbar-buttons:hover {
+    color: #AACADE;
+}
+
+.current-page {
+    color: #8DACBB;
+}
+
+.imageButton {
+    position: relative;
+    background: none;
+    padding: 0;
+    margin: 0px !important;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.icons-topright {
+    padding-right: 0px;
+    width: 80%;
+}
+
+
+.icon-container {
+    position: absolute;
+    right: 3%;
+    top: 1.5%;
+    
+}
+
+
+
+.hotbar {
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2%;
+    padding-top: 2.5%;
+    padding-bottom: 2%;
+}
+
+.mailInfo {
+    position: absolute;
+    font-family: Cantarell;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: #FFFFFF;
+    top: 60px;
+    border-radius: 15px;
+    padding: 12px;
+    right: -130px;
+    filter: drop-shadow(10px 9px 12.5px rgba(0, 0, 0, 0.25));
+    
+}
+.triangle {
+    position: absolute;
+    width: 20px;
+    top: 38px;
+    right: 16px;
+    z-index: 5;
+}
+
+.combine {
+    visibility: hidden;
+    z-index: 100;
+}
+
+#Mail:hover .combine {
+    visibility: visible;
+    opacity: 1;
+}
+
+.pages {
+    position: absolute;
+    left: 0px;
+}
+
+/* Customize the scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8DACBB; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6B8E9E; /* Color of the scrollbar thumb on hover */
+}
+
+/* HOTBAR END */
+
+/* desktop animations */
+
+@keyframes enter_bgrect {
+    from {
+        width: 0;
+        opacity: 0%
+    }
+    to {
+        width: 1100px;
+        opacity: 100%
+    }
+}
+
+@keyframes exit_bgrect {
+    from {
+        width: 1100px;
+        opacity: 100%;
+    }
+    to {
+        width: 0;
+        opacity: 0%;
+        visibility: hidden;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+        visibility: visible;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+        visibility: hidden;
+    }
+}
+
+/* Media Queries */
+@keyframes exitBgMobile {
+    from {
+        width: 90%;
+        opacity: 100%;
+    }
+    to {
+        width: 0;
+        opacity: 0%;
+        visibility: hidden;
+    }
+    
+}
+
+@media (max-width: 600px) {
+
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    .bg_rectangle {
+        margin-top: 40%;
+        position: relative; /* Creates a stacking context */
+        border-radius: 48px;
+        background: #FFF;
+        box-shadow: 9px 19px 10.9px 0px rgba(0, 0, 0, 0.25);
+        width: 90%;
+        height: 47%;
+        z-index: 0; 
+        display: flex; /* Enable Flexbox */
+        justify-self: center;
+        padding-left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 0px;
+    }
+
+    .bg_rectangle h1 {
+        font-size: 35px;
+        line-height: 41%; /* 41.818% */
+        margin: 0;
+        margin-top: 40%;
+        justify-self: center;
+        padding-left: 0;
+    }
+    
+    .bg_rectangle p {
+        font-size: 14px;
+        letter-spacing: -0.96px;
+        margin-top: 0;
+        padding-left: 12px;
+        padding-top: 0px;
+        padding-bottom: 5px;
+        justify-self: center;
+    }
+
+    #miffy-book {
+        visibility: hidden;
+    }
+
+    #sparkle {
+        top: -10%;
+        width: 30%;
+        left: 68%;
+    }
+
+    /* to copy and paste */
+    .body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .icon-container {
+        width: 130%;
+        top: 52%;
+        left: 45%;
+        z-index: 200;
+    }
+    
+    .imageButton {
+        width: 8%;
+        visibility: hidden;
+        animation: fadeIn 1.2s ease-out .7s forwards;
+    }
+
+    #Mail {
+        width: 9%;
+    }
+    
+    .pages {
+        top: 0px;
+        left: 15px;
+    }
+
+    .hotbar-buttons {
+        align-self: center;
+        font-size: 20px;
+        margin: 0px;
+        margin-right: 20px;
+        padding: 0px;
+        padding-top: 40px;
+    }
+
+    #projectsButton {
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+    
+    /* end of copy and paste */
+    .main-buttons {
+        display: flex;
+        flex-direction: row;
+        visibility: hidden;
+        animation: fadeIn 1s ease-out .8s forwards;
+    }
+
+    .mainButton {
+        width: 143.262px;
+        height: 52.657px; /* 75.758% */
+        border-radius: 34px;
+        color: #5B5555;
+        font-family: Cantarell;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 0px; /* 400% */
+        
+    }
+
+
+    
+    #miffy-bear {
+        top: 235px;
+        left: -30px;
+        width: 45%;
+        height: auto;
+        pointer-events: none;
+        visibility: hidden;
+        animation: fadeIn 1s ease-out forwards;
+        animation-delay: .5s;
+    }
+
+    .laptop {
+        visibility: hidden !important;
+    }
+    
+    @keyframes enter_bgrect {
+        from {
+            width: 0;
+            opacity: 0%
+        }
+        to {
+            width: 90%;
+            opacity: 100%
+        }
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0%;
+        }
+        to {
+            opacity: 100%;
+            visibility: visible;
+        }
+    }
+    
+}
+
+@media (max-width: 376px)
+{
+    .hotbar-buttons {
+        margin-right: 10px;
+    }
+
+    .icon-container {
+        top: 63%;
+    }
+
+    .main-buttons #resButton2 {
+        animation: fadeIn 1s ease-out 1.2s forwards;
+        visibility: hidden;
+    }
+
+    .Title p {
+        visibility: hidden;
+        animation: fadeIn 1s ease-out .9s forwards;
+    }
+    
+    .main-buttons #projectButton2 {
+        animation: fadeIn 1s ease-out 1.2s forwards;
+        visibility: hidden;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0%;
+        }
+        to {
+            opacity: 100%;
+            visibility: visible;
+        }
+    }
+}
+
+@media (max-width: 360px)
+{
+    .icon-container {
+        top: 60%;
+    }
+
+    .Title p {
+        visibility: hidden;
+        animation: fadeIn 1s ease-out 1s forwards;
+    }
+}
+
+@media (max-width: 344px)
+{
+
+    .Title h1 {
+        visibility: hidden;
+        animation: fadeIn 1s ease-out 1s forwards; 
+    }
+
+    .Title p {
+        font-size: 80%;
+    }
+
+    .icon-container {
+        top: 45%;
+    }
+
+    .bg_rectangle {
+        height: 35%;
+    }
+
+    #sparkle {
+        top: -15%;
+        width: 30%;
+        left: 68%;
+    }
+}
